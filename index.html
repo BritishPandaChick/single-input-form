@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single input 3D form</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- hierachy: #cuboid > form > div*4(cuboid faces) -->
+  <div id="cuboid">
+    <form>
+      <!-- #1 hover button -->
+      <div>
+        <p class="cuboid-text">Subscribe</p>
+      </div>
+
+      <!-- #2 text button -->
+      <div>
+        <input type="text" id="email" placeholder="Your Email" />
+      </div>
+
+      <!-- #3 loading button -->
+      <div>
+        <p class="cuboid-text loader">Just a moment</p>
+      </div>
+
+      <!-- #4 success button -->
+      <div>
+        <p class="cuboid-text">Thank you, we'll be in touch</p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
