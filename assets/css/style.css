@@ -1,0 +1,100 @@
+/* Custom fonts - Sniglet and Front Awesome */
+@import url('http://fonts.googleapis.com/css?family=Sniglet');
+@import url('http://thecodeplayer.com/uploads/fonts/font-awesome-4.1.0/css/font-awesome.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(120, 40%, 60%);
+  padding: 150px 0;
+  font: normal 18px Sniglet;
+  color: white;
+  text-align: center;
+}
+
+/* General Styles */
+h1 {
+  font-weight: normal;
+  font-size: 36px;
+  margin-bottom: 75px;
+}
+
+.fun-cube i {
+  transform: scale(10);
+  opacity: 0.1;
+}
+
+#cuboid {
+  width: 400px;
+  margin: 0 auto;
+  /* makes #cuboid a container for absolutely positioned descendants */
+  perspective: 1000px;
+}
+
+/* Faces */
+.cuboid-text {
+  /* each face will be 40px high */
+  line-height: 40px;
+  height: 40px;
+  background: hsl(120, 40%, 20%);
+}
+
+.loader {
+  background: hsl(120, 40%, 30%);
+  animation: phase 1s infinite;
+}
+
+/* create a pulsating animation for the loader face */
+@keyframes phase {
+  50% {
+    background: hsl(120, 70%, 30%);
+  }
+}
+
+#email {
+  background: white;
+  outline: none;
+  border: 0 none;
+  font: inherit;
+  text-align: left;
+  color: hsl(120, 40%, 30%);
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#submit {
+  display: none;
+}
+
+.submit-icon, .reset-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 40px;
+  padding: 0 10px;
+}
+
+/* .active = when user types something */
+.submit-icon.active {
+  color: hsl(120, 40%, 30%);
+}
+
+.reset-icon {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 14px;
+}
+
+#cuboid div {
+  position: relative;
+}
+
+/* 3D transforms. Each face will be rotated in multiples of -90deg and moved 20px(half of their 40px height) out */
+#cuboid div:nth-child(1) {
+  transform: translateX(-20px);
+}
