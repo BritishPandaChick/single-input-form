@@ -9,7 +9,7 @@
 
 body {
   background: hsl(120, 40%, 60%);
-  padding: 150px 0;
+  padding-top: 150px;
   font: normal 18px Sniglet;
   color: white;
   text-align: center;
@@ -115,7 +115,7 @@ h1 {
 /* 3D transforms. Each face will be rotated in multiples of -90deg and moved
 20px(half of their 40px height) out */
 #cuboid div:nth-child(1) {
-  transform: rotateX() translateZ(20px);
+  transform: rotateX(0deg) translateZ(20px);
 }
 
 #cuboid div:nth-child(2) {

@@ -12,6 +12,7 @@ $("#email").blur(function(){
 
 //If user is typing something that makes the arrow green/.active
 $("#email").keyup(function(){
+  //this adds .active class only if the input has some text
   $(".submit-icon").toggleClass("active", $(this).val().length > 0);
 });
 
